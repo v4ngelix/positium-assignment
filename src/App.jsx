@@ -19,6 +19,8 @@ function App() {
       const view = new MapView({
         container: mapDiv.current,
         map,
+        center: [ -8.693767657634714, 37.17917842122225 ],
+        zoom: 10,
       });
 
       const bookmarks = new Bookmarks({

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, {useRef, useEffect } from 'react';
 import Bookmarks from '@arcgis/core/widgets/Bookmarks';
 import Expand from '@arcgis/core/widgets/Expand';
 import MapView from "@arcgis/core/views/MapView";
@@ -7,17 +7,17 @@ import Map from "@arcgis/core/Map";
 import "./App.css";
 
 function App() {
-
-  const mapDiv = useRef(null);
+  const mapContainer = useRef(null);
 
   useEffect(() => {
-    if (mapDiv.current) {
+    const currentMapContainer = mapContainer.current;
+    if (currentMapContainer) {
       const map = new Map({
         basemap: "topo-vector",
       });
 
       const view = new MapView({
-        container: mapDiv.current,
+        container: currentMapContainer,
         map,
         center: [ -8.693767657634714, 37.17917842122225 ],
         zoom: 10,
@@ -40,9 +40,14 @@ function App() {
       // Add the widget to the top-right corner of the view
       view.ui.add(bkExpand, "top-right");
     }
-  }, [mapDiv]);
+  }, [ mapContainer ]);
 
-  return <div className="mapDiv" ref={mapDiv}></div>;
-}
+    return (
+      <div
+        className="pa__map-container"
+        ref={ mapContainer }
+      />
+    );
+  }
 
 export default App;

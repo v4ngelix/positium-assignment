@@ -21,6 +21,10 @@ function App() {
         map,
         center: [ -8.693767657634714, 37.17917842122225 ],
         zoom: 10,
+        constraints: {
+          minZoom: 10,
+          maxZoom: 12,
+        }
       });
 
       const bookmarks = new Bookmarks({

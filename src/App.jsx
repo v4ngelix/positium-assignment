@@ -34,7 +34,7 @@ function App() {
       const bkExpand = new Expand({
         view,
         content: bookmarks,
-        expanded: true
+        expanded: false
       });
 
       // Add the widget to the top-right corner of the view

@@ -39,15 +39,6 @@ function App() {
 
       // Add the widget to the top-right corner of the view
       view.ui.add(bkExpand, "top-right");
-
-      // bonus - how many bookmarks in the webmap?
-      view.when(() => {
-        if (webmap.bookmarks && webmap.bookmarks.length) {
-          console.log("Bookmarks: ", webmap.bookmarks.length);
-        } else {
-          console.log("No bookmarks in this webmap.");
-        }
-      });
     }
   }, [mapDiv]);
 

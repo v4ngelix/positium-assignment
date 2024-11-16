@@ -30,8 +30,9 @@ function App() {
         constraints: {
           minZoom: 10,
           maxZoom: 12,
-        }
           rotationEnabled: false,
+          geometry: getExtentFromFeature(algarveBoundary),
+        },
       });
 
       const bookmarks = new Bookmarks({

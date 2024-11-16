@@ -18,7 +18,7 @@ import algarveBoundary from '../data/algarveBoundary.json';
 
 // Layers
 import districtBoundaryLayer from './layers/districtBoundaryLayer.js';
-import algarveReservoirLayer from './layers/algarveReservoirs.js';
+import reservoirLayer from './layers/reservoirLayer.js';
 
 function App() {
   const mapContainer = useRef(null);
@@ -44,7 +44,7 @@ function App() {
       });
 
       map.add(districtBoundaryLayer());
-      map.add(algarveReservoirLayer());
+      map.add(reservoirLayer());
 
       const bookmarks = new Bookmarks({
         view

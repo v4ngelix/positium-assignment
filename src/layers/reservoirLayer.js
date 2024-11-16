@@ -5,7 +5,7 @@ import SimpleFillSymbol from '@arcgis/core/symbols/SimpleFillSymbol';
 import GeoJSONLayer from '@arcgis/core/layers/GeoJSONLayer';
 import SimpleRenderer from '@arcgis/core/renderers/SimpleRenderer';
 
-function algarveReservoirLayer() {
+function reservoirLayer() {
   const blob = new Blob([JSON.stringify(algarveReservoirs)], {
     type: "application/json"
   });
@@ -30,4 +30,4 @@ function algarveReservoirLayer() {
   });
 }
 
-export default algarveReservoirLayer;
+export default reservoirLayer;

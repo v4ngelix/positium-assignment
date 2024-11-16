@@ -42,6 +42,8 @@ function App() {
         },
       });
 
+      map.add(algarveBoundaryLayer());
+
       const bookmarks = new Bookmarks({
         view
       });

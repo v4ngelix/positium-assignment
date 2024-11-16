@@ -17,7 +17,7 @@ import { getCoord } from '@turf/turf';
 import algarveBoundary from '../data/algarveBoundary.json';
 
 // Layers
-import algarveBoundaryLayer from './layers/algarveBoundaryLayer';
+import districtBoundaryLayer from './layers/districtBoundaryLayer.js';
 import algarveReservoirLayer from './layers/algarveReservoirs.js';
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
         },
       });
 
-      map.add(algarveBoundaryLayer());
+      map.add(districtBoundaryLayer());
       map.add(algarveReservoirLayer());
 
       const bookmarks = new Bookmarks({

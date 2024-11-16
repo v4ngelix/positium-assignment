@@ -1,10 +1,11 @@
 import React, {useRef, useEffect } from 'react';
+import "./App.css";
+
 import Bookmarks from '@arcgis/core/widgets/Bookmarks';
 import Expand from '@arcgis/core/widgets/Expand';
 import MapView from "@arcgis/core/views/MapView";
 import Map from "@arcgis/core/Map";
 
-import "./App.css";
 
 function App() {
   const mapContainer = useRef(null);

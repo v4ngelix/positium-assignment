@@ -34,9 +34,8 @@ function App() {
         container: currentMapContainer,
         map,
         center: getCoord(center(algarveBoundary)),
-        zoom: 10,
         constraints: {
-          minZoom: 10,
+          minZoom: 11,
           maxZoom: 12,
           rotationEnabled: false,
           geometry: getExtentFromFeature(algarveBoundary),

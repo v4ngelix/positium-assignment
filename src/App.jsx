@@ -6,6 +6,11 @@ import Expand from '@arcgis/core/widgets/Expand';
 import MapView from "@arcgis/core/views/MapView";
 import Map from "@arcgis/core/Map";
 
+import getExtentFromFeature from './utilities/getExtentFromFeature.js';
+
+import algarveBoundary from '../data/algarveBoundary.json';
+import { center } from '@turf/center';
+import { getCoord } from '@turf/turf';
 
 function App() {
   const mapContainer = useRef(null);
@@ -20,7 +25,7 @@ function App() {
       const view = new MapView({
         container: currentMapContainer,
         map,
-        center: [ -8.693767657634714, 37.17917842122225 ],
+        center: getCoord(center(algarveBoundary)),
         zoom: 10,
         constraints: {
           minZoom: 10,

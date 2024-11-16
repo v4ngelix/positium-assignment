@@ -31,6 +31,7 @@ function App() {
           minZoom: 10,
           maxZoom: 12,
         }
+          rotationEnabled: false,
       });
 
       const bookmarks = new Bookmarks({

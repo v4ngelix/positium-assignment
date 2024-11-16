@@ -1,17 +1,23 @@
 import React, {useRef, useEffect } from 'react';
 import "./App.css";
 
+// Arcgis
 import Bookmarks from '@arcgis/core/widgets/Bookmarks';
 import Expand from '@arcgis/core/widgets/Expand';
 import MapView from "@arcgis/core/views/MapView";
 import Map from "@arcgis/core/Map";
 import TimeSlider from '@arcgis/core/widgets/TimeSlider';
 
+// Utilities
 import getExtentFromFeature from './utilities/getExtentFromFeature.js';
-
-import algarveBoundary from '../data/algarveBoundary.json';
 import { center } from '@turf/center';
 import { getCoord } from '@turf/turf';
+
+// Data
+import algarveBoundary from '../data/algarveBoundary.json';
+
+// Layers
+import algarveBoundaryLayer from './layers/algarveBoundaryLayer';
 
 function App() {
   const mapContainer = useRef(null);

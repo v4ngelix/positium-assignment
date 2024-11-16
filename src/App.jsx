@@ -18,6 +18,7 @@ import algarveBoundary from '../data/algarveBoundary.json';
 
 // Layers
 import algarveBoundaryLayer from './layers/algarveBoundaryLayer';
+import algarveReservoirLayer from './layers/algarveReservoirs.js';
 
 function App() {
   const mapContainer = useRef(null);
@@ -43,6 +44,7 @@ function App() {
       });
 
       map.add(algarveBoundaryLayer());
+      map.add(algarveReservoirLayer());
 
       const bookmarks = new Bookmarks({
         view

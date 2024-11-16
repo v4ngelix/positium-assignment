@@ -11,13 +11,6 @@ function getExtentFromFeature(feature) {
   const xmax = Math.max(...xCoords);
   const ymax = Math.max(...yCoords);
 
-  console.log({
-    xmin,
-    ymin,
-    xmax,
-    ymax,
-  });
-
   return new Extent({
     xmin,
     ymin,

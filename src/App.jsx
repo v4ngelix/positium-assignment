@@ -17,6 +17,7 @@ import algarveBoundary from '../data/algarveBoundary.json';
 // Layers
 import districtBoundaryLayer from './layers/districtBoundaryLayer.js';
 import reservoirLayer from './layers/reservoirLayer.js';
+import algarvePopulation from './charts/algarvePopulation.js';
 
 function App() {
   const mapContainer = useRef(null);
@@ -56,6 +57,7 @@ function App() {
         }
       });
       view.ui.add(timeSlider, "bottom-left");
+      view.ui.add(algarvePopulation(), "manual");
     }
   }, [ mapContainer ]);
 

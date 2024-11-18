@@ -53,7 +53,12 @@ function App() {
             start: new Date(1991, 0, 1),
             end: new Date(2024, 0, 1)
           },
-
+          stops: {
+            interval: {
+              value: 1,
+              unit: "months"
+            }
+          }
         }
       });
       view.ui.add(timeSlider, "bottom-left");

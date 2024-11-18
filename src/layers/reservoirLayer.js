@@ -19,11 +19,18 @@ function reservoirLayer() {
     outline: lineSymbol
   });
 
+  const reservoirPopup = new PopupTemplate({
+    title: "Reservoir",
+    content: "Name: { Name }"
+  });
+
   return new GeoJSONLayer({
     url: URL.createObjectURL(blob),
     renderer: new SimpleRenderer({
       symbol: fillSymbol
-    })
+    }),
+    popupEnabled: true,
+    popupTemplate: reservoirPopup
   });
 }
 

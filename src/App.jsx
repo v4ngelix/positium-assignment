@@ -43,19 +43,6 @@ function App() {
       map.add(districtBoundaryLayer());
       map.add(reservoirLayer());
 
-      const bookmarks = new Bookmarks({
-        view
-      });
-
-      const bkExpand = new Expand({
-        view,
-        content: bookmarks,
-        expanded: false
-      });
-
-      // Add the widget to the top-right corner of the view
-      view.ui.add(bkExpand, "top-right");
-
       const timeSlider = new TimeSlider({
         container: "timeSliderDiv",
 

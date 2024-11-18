@@ -49,13 +49,10 @@ function App() {
           view: view,
           mode: "instant",
           fullTimeExtent: {
-            start: new Date(2000, 0, 1),
-            end: new Date(2010, 0, 1)
+            start: new Date(1991, 0, 1),
+            end: new Date(2024, 0, 1)
           },
-          timeExtent: {
-            start: new Date(2000, 0, 1),
-            end: new Date(2000, 0, 1)
-          }
+
         }
       });
       view.ui.add(timeSlider, "bottom-left");

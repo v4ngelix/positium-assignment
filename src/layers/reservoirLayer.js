@@ -4,6 +4,7 @@ import Color from '@arcgis/core/Color';
 import SimpleFillSymbol from '@arcgis/core/symbols/SimpleFillSymbol';
 import GeoJSONLayer from '@arcgis/core/layers/GeoJSONLayer';
 import SimpleRenderer from '@arcgis/core/renderers/SimpleRenderer';
+import PopupTemplate from '@arcgis/core/PopupTemplate.js';
 
 function reservoirLayer() {
   const blob = new Blob([JSON.stringify(algarveReservoirs)], {
@@ -21,7 +22,7 @@ function reservoirLayer() {
 
   const reservoirPopup = new PopupTemplate({
     title: "Reservoir",
-    content: "Name: { Name }"
+    content: "Name: {Name}"
   });
 
   return new GeoJSONLayer({

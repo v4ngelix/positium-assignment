@@ -60,6 +60,7 @@ function reservoirLayer() {
 
   return new GeoJSONLayer({
     url: URL.createObjectURL(blob),
+    // TODO: Change color depending on the fill percentage
     renderer: new SimpleRenderer({
       symbol: new SimpleFillSymbol({
         color: new Color([0, 0, 255, 0.5]),

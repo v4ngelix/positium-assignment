@@ -62,7 +62,7 @@ function reservoirLayer() {
     url: URL.createObjectURL(blob),
     renderer: new SimpleRenderer({
       symbol: new SimpleFillSymbol({
-        color: new Color([0, 255, 0, 0.5]),
+        color: new Color([0, 0, 255, 0.5]),
         outline: new SimpleLineSymbol({
           width: 0
         })

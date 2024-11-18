@@ -45,7 +45,6 @@ function App() {
 
       const timeSlider = new TimeSlider({
         container: "timeSliderDiv",
-
         viewModel: {
           view: view,
           mode: "instant",

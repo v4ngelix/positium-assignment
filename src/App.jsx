@@ -61,6 +61,7 @@ function App() {
           }
         }
       });
+
       view.ui.add(timeSlider, "bottom-left");
       view.ui.add(algarvePopulation(), "manual");
     }
@@ -72,6 +73,6 @@ function App() {
         ref={ mapContainer }
       />
     );
-  }
+}
 
 export default App;

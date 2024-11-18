@@ -10,20 +10,17 @@ function reservoirLayer() {
     type: "application/json"
   });
 
-  const url = URL.createObjectURL(blob);
-
   const lineSymbol = new SimpleLineSymbol({
-    color: new Color([0, 0, 255, 0.8]), // Blue with 80% opacity
-    width: 2 // Line width in pixels
+    width: 0
   });
 
   const fillSymbol = new SimpleFillSymbol({
     color: new Color([0, 255, 0, 0.5]), // Green with 50% opacity
-    outline: lineSymbol // Use the line symbol for the polygon's border
+    outline: lineSymbol
   });
 
   return new GeoJSONLayer({
-    url,
+    url: URL.createObjectURL(blob),
     renderer: new SimpleRenderer({
       symbol: fillSymbol
     })

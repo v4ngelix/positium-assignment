@@ -9,7 +9,7 @@ import TimeSlider from '@arcgis/core/widgets/TimeSlider';
 // Utilities
 import getExtentFromFeature from './utilities/getExtentFromFeature.js';
 import { center } from '@turf/center';
-import { getCoord } from '@turf/turf';
+import { getCoord } from '@turf/invariant';
 
 // Data
 import algarveBoundary from '../data/algarveBoundary.json';
